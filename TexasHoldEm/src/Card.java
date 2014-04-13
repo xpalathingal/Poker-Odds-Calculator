@@ -3,5 +3,6 @@
  */
 public class Card {
     int value;
+    int flipEV;
     char suit;
 }
