@@ -1,8 +1,12 @@
 /**
  * Created by Xavier Palathingal (xvp2he) on 4/13/14.
  */
-public class Card {
+class Card {
     int value;
-    int flipEV;
     char suit;
+
+    public Card(int value, char suit) {
+        this.value = value;
+        this.suit = suit;
+    }
 }
