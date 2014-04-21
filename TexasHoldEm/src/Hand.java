@@ -16,7 +16,7 @@ public class Hand {
     }
 
     private void addCard(String card) {
-        myHand.add(new Card(card));
+//        myHand.add(new Card(card));
     }
 
     public void addBoard(String[] board) {

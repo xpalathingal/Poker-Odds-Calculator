@@ -4,23 +4,26 @@
 class Card implements Comparable<Card> {
     int value;
     char suit;
+    private String textVal;
 
-    public Card(String input) {
-        String val = input.substring(0,1);
-        suit = input.charAt(1);
+    public Card(int value, char suit) {
+        this.value = value;
+        this.suit = suit;
 
-        if (val.equals("A"))
-            value = 14;
-        else if (val.equals("K"))
-            value = 13;
-        else if (val.equals("Q"))
-            value = 12;
-        else if (val.equals("J"))
-            value = 11;
-        else if (val.equals("T"))
-            value = 10;
+        if (value == 14)
+            textVal = "A";
+        else if (value == 13)
+            textVal = "K";
+        else if (value == 12)
+            textVal = "Q";
+        else if (value == 11)
+            textVal = "J";
+        else if (value == 10)
+            textVal = "T";
         else
-            value = Integer.parseInt(val);
+            textVal = value + "";
+
+        textVal = textVal + suit;
     }
 
     int getValue() {
@@ -34,5 +37,10 @@ class Card implements Comparable<Card> {
     @Override
     public int compareTo(Card o) {
         return getValue() - o.getValue();
+    }
+
+    @Override
+    public String toString() {
+        return textVal;
     }
 }
