@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -5,8 +8,12 @@ import java.util.Scanner;
  * Created by Xavier Palathingal (xvp2he) on 4/13/14.
  */
 
-public class TexasHoldEm {
-    public static void main(String[] args) {
+public class HoldEmCalculator {
+    private JButton blahButton;
+
+    public HoldEmCalculator() {
+        blahButton.addActionListener(new CardButtonListener());
+
         Scanner in = new Scanner(System.in);
 //        System.out.print("How many hands are you inputting?");
         ArrayList<Hand> hands = new ArrayList<Hand>();
@@ -33,4 +40,15 @@ public class TexasHoldEm {
             hands.get(i).evaluate();
         }
     }
+
+    public static void main(String[] args) {
+        HoldEmCalculator calc = new HoldEmCalculator();
+    }
+
+    public class CardButtonListener implements ActionListener {
+        public void actionPerformed (ActionEvent e) {
+
+        }
+    }
+
 }
