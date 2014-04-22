@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Xavier Palathingal (xvp2he) on 4/13/14.
@@ -8,23 +9,25 @@ public class Hand {
     ArrayList<Card> myHand;
     ArrayList<Integer> handStr;
 
-    public Hand(String first, String second) {
+    public Hand(Card first, Card second, Card[] board) {
         myHand = new ArrayList<Card>();
         handStr = new ArrayList<Integer>();
-        addCard(first);
-        addCard(second);
+        myHand.add(first);
+        myHand.add(second);
+        Collections.addAll(myHand, board);
     }
 
-    private void addCard(String card) {
-//        myHand.add(new Card(card));
-    }
+//    private void addCard(Card card) {
+//        myHand.add(card);
+//    }
+//
+//    public void addBoard(Card[] board) {
+//        for (int i = 0; i < board.length; i++)
+//            addCard(board[i]);
+//    }
 
-    public void addBoard(String[] board) {
-        for (int i = 0; i < board.length; i++)
-            addCard(board[i]);
-    }
-
-    public void evaluate() {
+    public ArrayList<Integer> evaluate() {
         // Code to evaluate hand here
+        return handStr;
     }
 }
