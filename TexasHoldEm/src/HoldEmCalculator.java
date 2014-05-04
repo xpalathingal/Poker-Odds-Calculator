@@ -23,7 +23,7 @@ public class HoldEmCalculator extends JFrame {
     private int boardFocus = 0;
 
     public HoldEmCalculator() {
-        JPanel contentPane = new JPanel(new BorderLayout(0, 10));
+        JPanel contentPane = new JPanel( new BorderLayout(0, 10));
         contentPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         setContentPane(contentPane);
         pane = getContentPane();
@@ -33,7 +33,20 @@ public class HoldEmCalculator extends JFrame {
         board = new Card[5];
         setupBoardPanel();
         setupHandPanels();
-
+        //TEST
+        //Card a = new Card(6, 'd');
+        //Card b = new Card(6, 'h');
+        //Card c = new Card(8, 's');
+        //Card d = new Card(6, 'h');
+        //Card e = new Card(2, 'd');
+        //Card f = new Card(3, 'd');
+        //Card g = new Card(2, 'd');
+        		
+       //Card[] board = {c, d, e, f, g};
+       // Hand test = new Hand(a, b, board);
+       // System.out.println(test.evaluate());
+        
+        //TEST
         //setSize(600, 400);
         pack();
         setLocationRelativeTo(null);

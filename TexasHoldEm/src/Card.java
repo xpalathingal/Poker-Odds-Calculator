@@ -43,13 +43,13 @@ class Card implements Comparable<Card> {
         return value;
     }
 
-    int getSuit() {
+    char getSuit() {
         return suit;
     }
 
     @Override
     public int compareTo(Card o) {
-        return getValue() - o.getValue();
+        return o.getValue() - getValue();
     }
 
     @Override
